@@ -7,5 +7,8 @@ Codemanship TDD intensive course
 
    * write a failing test - this is your specification - it is here to define what the product should do, not whether it's working - that's a side benefit
   * write a code to pass the test as quickly as possible because we always want working code - too far into the red light and you have pain and unshippable code 
- * refactor to remove duplication
+ * refactor to remove duplication mainly, and other code smells too
+
+do this in a micro-iteration
+keep going until you can't think of any more failing tests
 
