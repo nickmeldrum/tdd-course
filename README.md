@@ -22,5 +22,8 @@ Write assertion first and work backwards
 run the test to ensure it fails in the way you expect it to
 write meaningful tests that are self-explanatory
 test shoud only have one reason to fail
+ may have more than 1 assertion, but should test 1 thing
 triangulate through concrete examples towards general solutions
+simplest generalisation - not simplest thing - so think of looking for the pattern/ algorithm instead of hardcoding values/ adding if statements
+
 
