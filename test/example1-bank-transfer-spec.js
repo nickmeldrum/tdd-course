@@ -23,11 +23,11 @@ describe('#bank', function() {
         });
 
         it('reduces the balance of the payer', function() {
-            this.payer.should.equal(5);
+            this.payer.balance.should.equal(5);
         });
 
         it('increases the balance of the payee', function() {
-            this.payee.should.equal(15);
+            this.payee.balance.should.equal(15);
         });
     });
 });
