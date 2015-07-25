@@ -1,7 +1,9 @@
-var should = require('chai').should(),
-    holidayProvider = require('../lib/example4-jg-holidays');
+var should = require('chai').should();
+var holidayProvider = require('../lib/example4-jg-holidays');
 
 describe('#holidays', function() {
+    var villaName = 'villa revolta';
+
     function holidayFactory(villaArr, flightAvailable) {
         var villas = function() { return villaArr; };
         var flights = function() { return flightAvailable; };
@@ -14,7 +16,6 @@ describe('#holidays', function() {
     });
 
     it('returns revolting villa when available', function() {
-        var villaName = 'villa revolta';
         var holidays = holidayFactory([villaName], true);
 
         holidays.availableHolidays(1, 1975)[0]
@@ -22,7 +23,6 @@ describe('#holidays', function() {
     });
 
     it('does not return villa when flight not available', function() {
-        var villaName = 'villa revolta';
         var holidays = holidayFactory([villaName], false);
 
         holidays.availableHolidays(1, 1975).length.should.equal(0);
