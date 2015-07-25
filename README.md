@@ -36,3 +36,24 @@ wriute some code to generate the fibonacci sequence up to a specific length whic
 transformation priority premise - look up - triangulation practice
 
 
+
+Full design procedure:
+
+start with use story - as a video library member...
+go talk to the story creator - the video library member and create the acceptance tests:
+
+given when then...
+
+get specific with values in given - then we have something we can use as a test - as it has test data in it
+
+look for the ands in the thens... - this is the number of things our design has to do
+
+write the do things out in the passive voice
+rewrite in the active voice - stating WHO should be doing these things
+
+this gives us our objects
+write CRC cards for each object writing what the object KNOWS and what it DOES on the left of the card
+write the other objects it collaborates with on the rightr of the card - this is the objects that it TELLS to do sometihhgn...
+
+this is the essence now of your object design!
+
