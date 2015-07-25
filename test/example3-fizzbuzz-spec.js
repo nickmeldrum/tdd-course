@@ -23,5 +23,9 @@ describe('#fizzbuzz', function() {
     it('4th number is 4', function() {
         result[3].should.equal('4');
     });
+
+    it('5th number is Buzz', function() {
+        result[4].should.equal('Buzz');
+    });
 });
 
