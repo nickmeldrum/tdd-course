@@ -13,6 +13,11 @@ describe('#bank', function() {
             this.payerBalance -= this.transferAmount;
             this.payerBalance.should.equal(5);
         });
+
+        it('increases the balance of the payee', function() {
+            this.payeeBalance += this.transferAmount;
+            this.payeeBalance.should.equal(15);
+        });
     });
 });
 
