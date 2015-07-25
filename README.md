@@ -12,3 +12,15 @@ Codemanship TDD intensive course
 do this in a micro-iteration
 keep going until you can't think of any more failing tests
 
+up front design is good - do just enough!
+
+but THOU SHALT NOT WRITE A LINE OF CODE WITHOUT A FAILING TEST THAT COVERS IT
+
+More TDD Basics:
+----------------
+Write assertion first and work backwards
+run the test to ensure it fails in the way you expect it to
+write meaningful tests that are self-explanatory
+test shoud only have one reason to fail
+triangulate through concrete examples towards general solutions
+
