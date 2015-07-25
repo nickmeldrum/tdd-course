@@ -27,3 +27,11 @@ triangulate through concrete examples towards general solutions
 simplest generalisation - not simplest thing - so think of looking for the pattern/ algorithm instead of hardcoding values/ adding if statements
 
 
+Example 2:
+
+Fibonacci
+
+wriute some code to generate the fibonacci sequence up to a specific length which is no shorter than 8 numbers and no longer than 50.
+
+transformation priority premise - look up - triangulation practice
+
