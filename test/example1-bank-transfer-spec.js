@@ -17,15 +17,17 @@ describe('#bank', function() {
     
     describe('transfer 5 thingys', function() {
         beforeEach(function() {
-            this.result = bank.transfer(10, 10, 5);
+            this.payer = bank.createAccount(10);
+            this.payee = bank.createAccount(10);
+            bank.transfer(this.payer, this.payee, 5);
         });
 
         it('reduces the balance of the payer', function() {
-            this.result.payerBalance.should.equal(5);
+            this.payer.should.equal(5);
         });
 
         it('increases the balance of the payee', function() {
-            this.result.payeeBalance.should.equal(15);
+            this.payee.should.equal(15);
         });
     });
 });
