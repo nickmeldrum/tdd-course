@@ -4,25 +4,14 @@ var should = require('chai').should(),
 describe('#bank', function() {
     describe('transfer 5 thingys', function() {
         beforeEach(function() {
-            this.payer = {
-                balance : 10
-            };
-
-            this.payee = {
-                balance : 10
-            };
-
-            this.amount = 5;
-
-            bank.transfer(this.payer, this.payee, this.amount);
+            this.payerBalance = 10;
+            this.payeeBalance = 10;
+            this.transferAmount = 5;
         });
 
         it('reduces the balance of the payer', function() {
-            this.payer.balance.should.equal(5);
-        });
-
-        it ('increases the balance of the payee', function() {
-            this.payee.balance.should.equal(15);
+            this.payerBalance -= this.transferAmount;
+            this.payerBalance.should.equal(5);
         });
     });
 });
