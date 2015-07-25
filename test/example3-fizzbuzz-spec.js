@@ -15,5 +15,9 @@ describe('#fizzbuzz', function() {
     it('second number is a 2', function() {
         result[1].should.equal('2');
     });
+
+    it('third number is a fizz', function() {
+        result[2].should.equal('Fizz');
+    });
 });
 
