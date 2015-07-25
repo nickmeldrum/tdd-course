@@ -10,12 +10,12 @@ describe('#bank', function() {
         });
 
         it('reduces the balance of the payer', function() {
-            this.payerBalance -= this.transferAmount;
+            this.payerBalance = bank.changeBalance(this.payerBalance, -this.transferAmount);
             this.payerBalance.should.equal(5);
         });
 
         it('increases the balance of the payee', function() {
-            this.payeeBalance += this.transferAmount;
+            this.payeeBalance = bank.changeBalance(this.payeeBalance, this.transferAmount);
             this.payeeBalance.should.equal(15);
         });
     });
