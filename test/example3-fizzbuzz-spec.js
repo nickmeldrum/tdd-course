@@ -3,29 +3,22 @@ var should = require('chai').should(),
 
 describe('#fizzbuzz', function() {
     var result;
+    var provider = [
+        {number: 1, expected: '1'},
+        {number: 2, expected: '2'},
+        {number: 3, expected: 'Fizz'},
+        {number: 4, expected: '4'},
+        {number: 5, expected: 'Buzz'},
+    ];
 
     beforeEach(function() {
         result = fizzbuzz().split(',');
     });
 
-    it('first number is a 1', function() {
-        result[0].should.equal('1');
-    });
-
-    it('second number is a 2', function() {
-        result[1].should.equal('2');
-    });
-
-    it('third number is a fizz', function() {
-        result[2].should.equal('Fizz');
-    });
-
-    it('4th number is 4', function() {
-        result[3].should.equal('4');
-    });
-
-    it('5th number is Buzz', function() {
-        result[4].should.equal('Buzz');
+    provider.forEach(function(provider) {
+        it('number ' + provider.number + ' is a ' + provider.expected, function() {
+            result[provider.number - 1].should.equal(provider.expected);
+        });
     });
 });
 
