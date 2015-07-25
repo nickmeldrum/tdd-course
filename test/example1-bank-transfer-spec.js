@@ -1,11 +1,21 @@
 var should = require('chai').should(),
-    example = require('../lib/example1-bank-transfer');
+    bank = require('../lib/example1-bank-transfer')();
 
-describe('#example', function() {
-    it('returns 1', function() {
-        var answer = example(); 
+describe('#bank-transfer', function() {
+    it('reduces the balance of the payer', function() {
+        var payer = {
+            balance : 10
+        };
 
-        answer.should.equal(1);
+        var payee = {
+            balance : 10
+        };
+
+        var amount = 5;
+
+        bank.transfer(payer, payee, amount);
+
+        payer.balance.should.equal(5);
     });
 });
 
